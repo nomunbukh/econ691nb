@@ -41,3 +41,9 @@ temp<-results %>% #it was illinois
 
 assign(i,temp) #using assign instead of just i
 }
+
+
+#API Data
+install.packages("tidycensus")
+library(tidycensus)
+#census_api_key("411dfec775a626ee3a8532c500817c53b4d9de7b",install=TRUE) do it on console only one time
