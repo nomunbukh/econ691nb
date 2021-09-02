@@ -47,3 +47,7 @@ assign(i,temp) #using assign instead of just i
 install.packages("tidycensus")
 library(tidycensus)
 #census_api_key("411dfec775a626ee3a8532c500817c53b4d9de7b",install=TRUE) do it on console only one time
+
+vars<-c("B01001_001","B01001_002","B02001_001","B02001_002", 
+        "B02001_003","B05001_001","B05001_006","B07001_001", 
+        "B07001_017","B07001_033","B07001_049","B07001_065","B07001_081")
