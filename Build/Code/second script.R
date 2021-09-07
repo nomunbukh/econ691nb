@@ -1,7 +1,7 @@
 #This is script for class two
 #Created by Nomun
 #Created on September 1, 2021
-#web scripping
+#web scraping
 
 rm(list = ls())
 
