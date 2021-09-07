@@ -51,3 +51,8 @@ library(tidycensus)
 vars<-c("B01001_001","B01001_002","B02001_001","B02001_002", 
         "B02001_003","B05001_001","B05001_006","B07001_001", 
         "B07001_017","B07001_033","B07001_049","B07001_065","B07001_081")
+acs <- get_acs(geography = "county", #defines geopgraph level of data
+               variables = vars,     #specifics the data we want
+               state = 17,           #denotes the specific state
+               year = 2016,          #denotes the year
+               geometry = TRUE)      #downloads the TIGER shapefile data
