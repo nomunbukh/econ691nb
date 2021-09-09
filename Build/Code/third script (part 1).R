@@ -57,7 +57,7 @@ for(i in fips){
     mutate(state = states[k])
   
   #assign(paste0(states[k],"census"),temp)
-  ifelse(k==1, census <- temp, census <- rbind(census, temp)
+  ifelse(k==1,census<-temp,census<-rbind(census,temp))
   
   temp$area<-st_area(temp)
   map <- temp %>%
@@ -65,10 +65,11 @@ for(i in fips){
     mutate(state = states[k])
   
   #assign(paste0(states[k],"map"),map) 
-  ifelse(k==1, MAP <- map, MAP <- rbind(MAP,map))
+  ifelse(k==1,MAP<-map,MAP<-rbind(MAP,map))
   
   k<-k+1
   rm(temp, map)
 }
 
-#rm(fips, i, k, states, vars, acs)
+rm(fips, i, k, states, vars, acs)
+
