@@ -184,8 +184,7 @@ CENSUS.3$County[63]<-votes$County[63]
 CENSUS.3_votes<-merge(CENSUS.3,votes,by="County",all=TRUE)
 ggplot(CENSUS.3_votes)+
   geom_sf(aes(fill = pctClinton))+
-  scale_fill_gradient(low="white",high="blue",limits=c(0,1),aes(name="Percent Clinton"))+
-  
+  scale_fill_gradient(low="white",high="blue",limits=c(0,1),aes(name="Percent Clinton"))
 
 
 ggplot(CENSUS.3_votes)+
