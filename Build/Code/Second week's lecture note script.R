@@ -76,7 +76,7 @@ il.acs<-acs %>%
                                variable=="B07001_065" ~ "OthState",
                                variable=="B07001_081" ~ "Abroad",
                                TRUE ~ "other")) %>%
-  select(!c(moe,variable)) %>%
+  select(!c(moe,variable,NAME)) %>%
   spread(key=variable2, value=estimate) %>% 
   
   mutate(perMale = Male/TotPop,

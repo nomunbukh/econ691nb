@@ -145,11 +145,13 @@ for(i in fips){
 
 arizonacensus$County<-trimws(gsub(" County, Arizona","",arizonacensus$NAME))
 idahocensus$County<-trimws(gsub(" County, Idaho","",idahocensus$NAME))
-nevadacensus$County<-trimws(gsub(" County, Nevada","",nevadacensus$NAME))
+nevadacensus$County<-trimws(gsub(" County, Nevada","",nevadacensus$NAME)) 
+nevadacensus$County<-trimws(gsub(" City, Nevada","",nevadacensus$County))
 oregoncensus$County<-trimws(gsub(" County, Oregon","",oregoncensus$NAME))
 utahcensus$County<-trimws(gsub(" County, Utah","",utahcensus$NAME))
 
 CENSUS.2 <- rbind(arizonacensus,idahocensus,nevadacensus,oregoncensus,utahcensus)
+save(list = "CENSUS.2", file = "C:/Users/nomun/OneDrive/Documents/Git test/econ691nb/econ691nb/Build/Output/CENSUS2.RData")
 
 gamma <- function(x,y){
   temp<-(x-y)/(y)
